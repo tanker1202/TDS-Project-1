@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TDS Virtual TA</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding-top: 50px; }
+    input, button { padding: 10px; width: 100%; margin-top: 10px; }
+    .response { margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>🤖 TDS Virtual TA</h1>
+  <form method="POST">
+    <input type="text" name="question" placeholder="Ask me anything..." required>
+    <button type="submit">Ask</button>
+  </form>
+
+  {% if answer %}
+  <div class="response">
+    <strong>Question:</strong> {{ question }}<br>
+    <strong>Answer:</strong> {{ answer }}
+  </div>
+  {% endif %}
+</body>
+</html>
